@@ -8,17 +8,17 @@ URL:            http://lutris.net
 Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
 
 BuildArch:      noarch
-BuildRequires:  python3
-BuildRequires:  python3-gobject3
-BuildRequires:  python3-pyxdg
+BuildRequires:  pkgconfig(python)
+BuildRequires:  pkgconfig(pygobject-3.0)
+BuildRequires:  python3egg(pyxdg)
 
-Requires:       python3-dbus
-Requires:       python3-evdev
-Requires:       python3-gobject3
-Requires:       python3-pyxdg
-Requires:       python3-yaml
+Requires:       python-dbus
+Requires:       python-evdev
+Requires:       python-gobject3
+Requires:       python-pyxdg
+Requires:       python-yaml
 Requires:       xrandr
-Recommends:     python3-pyinotify
+Recommends:     python-pyinotify
 
 %description
 Lutris is a gaming platform for GNU/Linux. Its goal is to make
@@ -32,10 +32,10 @@ on Linux.
 %autopatch -p1
 
 %build
-%py3_build
+%py_build
 
 %install
-%py3_install
+%py_install
 
 %files
 %{_bindir}/%{name}
