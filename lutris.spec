@@ -12,6 +12,7 @@ BuildRequires:  pkgconfig(python)
 BuildRequires:  pkgconfig(pygobject-3.0)
 BuildRequires:  python3egg(pyxdg)
 BuildRequires:  python3egg(setuptools)
+BuildRequires:  python3egg(pygobject)
 
 Requires:       python-dbus
 Requires:       python-evdev
