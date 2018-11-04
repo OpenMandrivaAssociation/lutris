@@ -11,6 +11,7 @@ BuildArch:      noarch
 BuildRequires:  pkgconfig(python)
 BuildRequires:  pkgconfig(pygobject-3.0)
 BuildRequires:  python3egg(pyxdg)
+BuildRequires:  python3egg(setuptools)
 
 Requires:       python-dbus
 Requires:       python-evdev
