@@ -1,5 +1,5 @@
 Name:           lutris
-Version:        0.4.21
+Version:        0.4.21.1
 Release:        2
 Summary:        Install and play any video game easily
 Group:          Games/Other
@@ -15,7 +15,8 @@ BuildRequires:  python3egg(setuptools)
 BuildRequires:  python3egg(pygobject)
 
 Requires:       python-dbus
-Requires:       python-evdev
+# Not available in OpenMandriva yet
+#Requires:       python-evdev
 Requires:       python-gobject3
 Requires:       python-pyxdg
 Requires:       python-yaml
