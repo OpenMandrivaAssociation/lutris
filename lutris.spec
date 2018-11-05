@@ -13,6 +13,7 @@ BuildRequires:  pkgconfig(pygobject-3.0)
 BuildRequires:  python3egg(pyxdg)
 BuildRequires:  python3egg(setuptools)
 BuildRequires:  python3egg(pygobject)
+BuildRequires:  typelib(Gdk)
 
 Requires:       python-dbus
 # Not available in OpenMandriva yet
