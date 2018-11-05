@@ -1,6 +1,6 @@
 Name:           lutris
-Version:        0.4.21.1
-Release:        2
+Version:        0.4.22
+Release:        1
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
@@ -13,6 +13,8 @@ BuildRequires:  pkgconfig(pygobject-3.0)
 BuildRequires:  python3egg(pyxdg)
 BuildRequires:  python3egg(setuptools)
 BuildRequires:  python3egg(pygobject)
+BuildRequires:  pkgconfig(gdk-3.0)
+BuildRequires:  pkgconfig(gtk+-3.0)
 
 Requires:       python-dbus
 # Not available in OpenMandriva yet
@@ -22,6 +24,8 @@ Requires:       python-pyxdg
 Requires:       python-yaml
 Requires:       xrandr
 Recommends:     python-pyinotify
+Recommends:     wine
+
 
 %description
 Lutris is a gaming platform for GNU/Linux. Its goal is to make
