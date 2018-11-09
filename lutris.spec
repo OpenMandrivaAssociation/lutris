@@ -17,8 +17,7 @@ BuildRequires:  pkgconfig(gdk-3.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
 
 Requires:       python-dbus
-# Not available in OpenMandriva yet
-#Requires:       python-evdev
+Requires:       python-evdev
 Requires:       python-gobject3
 Requires:       python-pyxdg
 Requires:       python-yaml
