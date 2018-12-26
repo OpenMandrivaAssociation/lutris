@@ -1,6 +1,6 @@
 Name:           lutris
 Version:        0.4.23
-Release:        1
+Release:        2
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
@@ -15,6 +15,10 @@ BuildRequires:  python3egg(setuptools)
 BuildRequires:  python3egg(pygobject)
 BuildRequires:  pkgconfig(gdk-3.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
+
+Requires:       glib-networking
+Requires:       gvfs
+Requires:       python-gi
 
 Requires:       python-dbus
 Requires:       python-evdev
@@ -37,11 +41,14 @@ on Linux.
 %setup -q -n %{name}
 %autopatch -p1
 
+#Dont use %py_build and %py_install because when launch app you see error: ImportError: No module named lutris.gui.application
+#https://github.com/lutris/lutris/issues/1428 (penguin)
+
 %build
-%py_build
+python setup.py build
 
 %install
-%py_install
+python setup.py install --root=%{buildroot}
 
 %files
 %{_bindir}/%{name}
@@ -51,5 +58,5 @@ on Linux.
 %{_datadir}/polkit-1/actions/*
 %{_iconsdir}/hicolor/48x48/apps/%{name}.png
 %{_iconsdir}/hicolor/scalable/apps/%{name}.svg
-%{python3_sitelib}/%{name}-%{version}-py%{python3_version}.egg-info
-%{python3_sitelib}/%{name}/
+%{python_sitelib}/%{name}-%{version}-py%{python_version}.egg-info
+%{python_sitelib}/%{name}/
