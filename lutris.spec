@@ -16,12 +16,9 @@ BuildRequires:  python3egg(pygobject)
 BuildRequires:  pkgconfig(gdk-3.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
 
-BuildRequires:  librsvg
-
 Requires:       glib-networking
 Requires:       gvfs
 Requires:       python-gi
-
 
 Requires:       python-dbus
 Requires:       python-evdev
@@ -48,7 +45,7 @@ on Linux.
 %py_build
 
 %install
-%py_install
+%py_install --root=%{buildroot} --skip-build
 
 %files
 %{_bindir}/%{name}
