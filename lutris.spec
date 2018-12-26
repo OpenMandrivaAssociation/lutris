@@ -45,7 +45,7 @@ on Linux.
 python setup.py build
 
 %install
-python setup.py install
+python setup.py install --root=%{buildroot}
 
 %files
 %{_bindir}/%{name}
