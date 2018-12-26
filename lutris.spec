@@ -42,7 +42,7 @@ on Linux.
 %autopatch -p1
 
 %build
-%py_build
+python setup.py build
 
 %install
 python setup.py install --root=%{buildroot} --skip-build
