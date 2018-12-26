@@ -16,6 +16,13 @@ BuildRequires:  python3egg(pygobject)
 BuildRequires:  pkgconfig(gdk-3.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
 
+BuildRequires:  librsvg
+
+Requires:       glib-networking
+Requires:       gvfs
+Requires:       python-gi
+
+
 Requires:       python-dbus
 Requires:       python-evdev
 Requires:       python-gobject3
