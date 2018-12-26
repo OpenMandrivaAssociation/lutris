@@ -41,6 +41,9 @@ on Linux.
 %setup -q -n %{name}
 %autopatch -p1
 
+#Dont use %py_build and %py_install because when launch app you see error: ImportError: No module named lutris.gui.application
+#https://github.com/lutris/lutris/issues/1428 (penguin)
+
 %build
 python setup.py build
 
