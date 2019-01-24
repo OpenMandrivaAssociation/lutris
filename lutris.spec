@@ -1,11 +1,11 @@
 Name:           lutris
-Version:        0.4.23
-Release:        2
+Version:        0.5.0beta3
+Release:        1
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
 URL:            http://lutris.net
-Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
+Source0:        http://lutris.net/releases/%{name}_%{version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python)
@@ -26,6 +26,9 @@ Requires:       python-gobject3
 Requires:       python-pyxdg
 Requires:       python-yaml
 Requires:       xrandr
+Requires:       python-requests
+Requires:       python-pillow
+
 Recommends:     python-pyinotify
 Recommends:     wine
 
