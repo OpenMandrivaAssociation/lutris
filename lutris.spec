@@ -44,7 +44,7 @@ on Linux.
 #https://github.com/lutris/lutris/issues/1428 (penguin)
 
 %prep
-%setup -q -n %{name}
+%setup -q -n %{name}-%{version}
 %autopatch -p1
 
 %build
