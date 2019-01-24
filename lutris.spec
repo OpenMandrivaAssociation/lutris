@@ -5,7 +5,7 @@ Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
 URL:            http://lutris.net
-Source0:        http://lutris.net/releases/%{name}_%{version}.tar.gz
+Source0:        http://lutris.net/releases/%{name}-%{version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python)
