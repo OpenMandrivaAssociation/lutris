@@ -29,6 +29,8 @@ Requires:       xrandr
 Requires:       python-requests
 Requires:       python-pillow
 
+Requires:       typelib(GDesktopEnums)
+
 Recommends:     python-pyinotify
 Recommends:     wine
 
