@@ -1,11 +1,11 @@
 Name:           lutris
-Version:        0.4.23
-Release:        2
+Version:        0.5.0
+Release:        1
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
 URL:            http://lutris.net
-Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
+Source0:        http://lutris.net/releases/%{name}-%{version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python)
@@ -26,6 +26,11 @@ Requires:       python-gobject3
 Requires:       python-pyxdg
 Requires:       python-yaml
 Requires:       xrandr
+Requires:       python-requests
+Requires:       python-pillow
+
+Requires:       typelib(GDesktopEnums)
+
 Recommends:     python-pyinotify
 Recommends:     wine
 
@@ -41,7 +46,7 @@ on Linux.
 #https://github.com/lutris/lutris/issues/1428 (penguin)
 
 %prep
-%setup -q -n %{name}
+%setup -q -n %{name}-%{version}
 %autopatch -p1
 
 %build
@@ -52,11 +57,12 @@ python setup.py install --root=%{buildroot}
 
 %files
 %{_bindir}/%{name}
+%{_bindir}/%{name}-wrapper
 %{_datadir}/%{name}/
-%{_datadir}/appdata/%{name}.appdata.xml
-%{_datadir}/applications/%{name}.desktop
+%{_datadir}/appdata/net.lutris.Lutris.appdata.xml
+%{_datadir}/applications/net.lutris.Lutris.desktop
 %{_datadir}/polkit-1/actions/*
-%{_iconsdir}/hicolor/48x48/apps/%{name}.png
+%{_iconsdir}/hicolor/*/apps/%{name}.png
 %{_iconsdir}/hicolor/scalable/apps/%{name}.svg
 %{python_sitelib}/%{name}-%{version}-py%{python_version}.egg-info
 %{python_sitelib}/%{name}/
