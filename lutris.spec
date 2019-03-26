@@ -50,7 +50,7 @@ on Linux.
 #https://github.com/lutris/lutris/issues/1428 (penguin)
 
 %prep
-%setup -q -n %{name}_%{version}
+%setup -q
 %autopatch -p1
 
 %build
