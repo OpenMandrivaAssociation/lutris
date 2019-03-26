@@ -5,7 +5,7 @@ Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
 URL:            http://lutris.net
-Source0:        http://lutris.net/releases/%{name}-%{version}.tar.gz
+Source0:        http://lutris.net/releases/%{name}_%{version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python)
@@ -31,6 +31,8 @@ Requires:       python-pillow
 
 Requires:       typelib(GDesktopEnums)
 
+# Optional deps
+
 Recommends:     python-pyinotify
 Recommends:     wine
 Recommends:     gamemode
@@ -48,7 +50,7 @@ on Linux.
 #https://github.com/lutris/lutris/issues/1428 (penguin)
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{name}_%{version}
 %autopatch -p1
 
 %build
