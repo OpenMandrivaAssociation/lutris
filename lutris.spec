@@ -1,5 +1,5 @@
 Name:           lutris
-Version:        0.5.0
+Version:        0.5.1.3
 Release:        1
 Summary:        Install and play any video game easily
 Group:          Games/Other
@@ -33,7 +33,9 @@ Requires:       typelib(GDesktopEnums)
 
 Recommends:     python-pyinotify
 Recommends:     wine
-
+Recommends:     gamemode
+# Not ready (yet)
+Recommends:     libstrange
 
 %description
 Lutris is a gaming platform for GNU/Linux. Its goal is to make
