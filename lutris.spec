@@ -1,11 +1,11 @@
 Name:           lutris
-Version:        0.5.0
+Version:        0.5.1.3
 Release:        1
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
 URL:            http://lutris.net
-Source0:        http://lutris.net/releases/%{name}-%{version}.tar.gz
+Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
 
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python)
@@ -31,9 +31,13 @@ Requires:       python-pillow
 
 Requires:       typelib(GDesktopEnums)
 
+# Optional deps
+
 Recommends:     python-pyinotify
 Recommends:     wine
-
+Recommends:     gamemode
+# Not ready (yet)
+Recommends:     libstrange
 
 %description
 Lutris is a gaming platform for GNU/Linux. Its goal is to make
@@ -46,7 +50,7 @@ on Linux.
 #https://github.com/lutris/lutris/issues/1428 (penguin)
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{name}
 %autopatch -p1
 
 %build
@@ -59,7 +63,7 @@ python setup.py install --root=%{buildroot}
 %{_bindir}/%{name}
 %{_bindir}/%{name}-wrapper
 %{_datadir}/%{name}/
-%{_datadir}/appdata/net.lutris.Lutris.appdata.xml
+%{_datadir}/metainfo/net.lutris.Lutris.appdata.xml
 %{_datadir}/applications/net.lutris.Lutris.desktop
 %{_datadir}/polkit-1/actions/*
 %{_iconsdir}/hicolor/*/apps/%{name}.png
