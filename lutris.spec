@@ -1,11 +1,12 @@
 Name:           lutris
 Version:	0.5.4
-Release:	2
+Release:	3
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
 URL:            http://lutris.net
 Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
+Patch0:		12a458db3c590c3f1972594e091a24cb4d65b610.patch
 
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python)
