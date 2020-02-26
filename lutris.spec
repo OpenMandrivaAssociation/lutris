@@ -11,9 +11,9 @@ Patch0:		12a458db3c590c3f1972594e091a24cb4d65b610.patch
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python)
 BuildRequires:  pkgconfig(pygobject-3.0)
-BuildRequires:  python3egg(pyxdg)
-BuildRequires:  python3egg(setuptools)
-BuildRequires:  python3egg(pygobject)
+BuildRequires:  python3dist(pyxdg)
+BuildRequires:  python3dist(setuptools)
+BuildRequires:  python3dist(pygobject)
 BuildRequires:  pkgconfig(gdk-3.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
 
@@ -39,6 +39,14 @@ Recommends:     wine
 Recommends:     gamemode
 # Not ready (yet)
 Recommends:     libstrange
+
+#Vulkan deps
+Recommends:     vulkan-loader
+Recommends:     %{_lib}vulkan1
+# Needed to launch x86 games
+%ifarch x86_64
+Recommends:     libvulkan1
+%endif
 
 %description
 Lutris is a gaming platform for GNU/Linux. Its goal is to make
