@@ -1,5 +1,5 @@
---- /lutris/lutris/gui/views/store.py
-+++ /lutris/lutris/gui/views/store.py-om
+--- lutris/lutris/gui/views/store.py
++++ lutris/lutris/gui/views/store.py-om
 @@ -130,7 +130,11 @@
          self.prevent_sort_update = False  # prevent recursion with signals
          self.modelfilter = self.store.filter_new()
