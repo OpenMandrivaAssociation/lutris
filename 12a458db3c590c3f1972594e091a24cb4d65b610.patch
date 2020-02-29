@@ -15,7 +15,7 @@ index 9e843e9e4..8fe5decf5 100644
          self.prevent_sort_update = False  # prevent recursion with signals
          self.modelfilter = self.store.filter_new()
          self.modelfilter.set_visible_func(self.filter_view)
--        self.modelsort = Gtk.TreeModelSort.new_with_model(self.modelfilter)
+-        self.modelsort = Gtk.TreeModelSort.sort_new_with_model(self.modelfilter)
 +        try:
 +            self.modelsort = Gtk.TreeModelSort.sort_new_with_model(self.modelfilter)
 +        except AttributeError:

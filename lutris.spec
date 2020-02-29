@@ -6,6 +6,9 @@ Group:          Games/Other
 License:        GPLv3+
 URL:            http://lutris.net
 Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
+# Patch to fix app launch: AttributeError: type object 'TreeModelSort'
+# upstream: https://github.com/lutris/lutris/issues/2554
+# fixed by: https://github.com/lutris/lutris/commit/12a458db3c590c3f1972594e091a24cb4d65b610#diff-39d260af21504e74ec2c1d23e98f1808
 Patch0:		12a458db3c590c3f1972594e091a24cb4d65b610.patch
 
 BuildArch:      noarch
@@ -37,15 +40,19 @@ Requires:       typelib(GDesktopEnums)
 Recommends:     python-pyinotify
 Recommends:     wine
 Recommends:     gamemode
+%ifarch x86_64
+Recommends:     gamemode(x86-32)
+%endif
 # Not ready (yet)
 Recommends:     libstrange
 
-#Vulkan deps
+#Vulkan deps for run games in DXVK and D9VK
 Recommends:     vulkan-loader
 Recommends:     %{_lib}vulkan1
 # Needed to launch x86 games
 %ifarch x86_64
 Recommends:     libvulkan1
+Recommends:     vulkan-loader(x86-32)
 %endif
 
 %description
