@@ -1,15 +1,11 @@
 Name:           lutris
-Version:	0.5.4
-Release:	3
+Version:	0.5.5
+Release:	1
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
 URL:            http://lutris.net
 Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
-# Patch to fix app launch: AttributeError: type object 'TreeModelSort'
-# upstream: https://github.com/lutris/lutris/issues/2554
-# fixed by: https://github.com/lutris/lutris/commit/12a458db3c590c3f1972594e091a24cb4d65b610#diff-39d260af21504e74ec2c1d23e98f1808
-Patch0:		12a458db3c590c3f1972594e091a24cb4d65b610.patch
 
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python)
@@ -77,11 +73,9 @@ python setup.py install --root=%{buildroot}
 
 %files
 %{_bindir}/%{name}
-%{_bindir}/%{name}-wrapper
 %{_datadir}/%{name}/
 %{_datadir}/metainfo/net.lutris.Lutris.metainfo.xml
 %{_datadir}/applications/net.lutris.Lutris.desktop
-%{_datadir}/polkit-1/actions/*
 %{_iconsdir}/hicolor/*/apps/%{name}.png
 %{_iconsdir}/hicolor/scalable/apps/%{name}.svg
 %{python_sitelib}/%{name}-%{version}-py%{python_version}.egg-info
