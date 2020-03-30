@@ -73,11 +73,9 @@ python setup.py install --root=%{buildroot}
 
 %files
 %{_bindir}/%{name}
-%{_bindir}/%{name}-wrapper
 %{_datadir}/%{name}/
 %{_datadir}/metainfo/net.lutris.Lutris.metainfo.xml
 %{_datadir}/applications/net.lutris.Lutris.desktop
-%{_datadir}/polkit-1/actions/*
 %{_iconsdir}/hicolor/*/apps/%{name}.png
 %{_iconsdir}/hicolor/scalable/apps/%{name}.svg
 %{python_sitelib}/%{name}-%{version}-py%{python_version}.egg-info
