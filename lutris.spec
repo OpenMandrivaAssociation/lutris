@@ -1,11 +1,12 @@
 Name:           lutris
 Version:	0.5.8.1
-Release:	1
+Release:	2
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
 URL:            http://lutris.net
 Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
+Patch0:		https://github.com/lutris/lutris/commit/116dac759db01b50dd36b27fb66853c815d177ea.patch
 
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python)
@@ -36,7 +37,7 @@ Requires:       typelib(GDesktopEnums)
 Recommends:     python-pyinotify
 Recommends:     wine
 Recommends:     gamemode
-%ifarch x86_64
+%ifarch %{x86_64}
 Recommends:     gamemode(x86-32)
 %endif
 # Not ready (yet)
@@ -46,7 +47,7 @@ Recommends:     libstrange
 Recommends:     vulkan-loader
 Recommends:     %{_lib}vulkan1
 # Needed to launch x86 games
-%ifarch x86_64
+%ifarch %{x86_64}
 Recommends:     libvulkan1
 Recommends:     vulkan-loader(x86-32)
 %endif
@@ -62,8 +63,7 @@ on Linux.
 #https://github.com/lutris/lutris/issues/1428 (penguin)
 
 %prep
-%setup -q -n %{name}
-%autopatch -p1
+%autosetup -p1 -n %{name}
 
 %build
 python setup.py build

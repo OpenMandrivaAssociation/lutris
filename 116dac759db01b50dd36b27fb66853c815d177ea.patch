@@ -1,0 +1,28 @@
+From 116dac759db01b50dd36b27fb66853c815d177ea Mon Sep 17 00:00:00 2001
+From: Philip Zerull <przerull@gmail.com>
+Date: Wed, 25 Nov 2020 18:08:57 -0500
+Subject: [PATCH] Adjustment to support file-magic (Possibly Fixes #3292)
+
+---
+ lutris/util/game_finder.py | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/lutris/util/game_finder.py b/lutris/util/game_finder.py
+index c7838e107..593f84c8b 100644
+--- a/lutris/util/game_finder.py
++++ b/lutris/util/game_finder.py
+@@ -13,8 +13,12 @@
+ 
+ 
+ if not hasattr(magic, "from_file"):
+-    logger.error("Your version of python-magic is too old.")
+-    MAGIC_AVAILABLE = False
++    if hasattr(magic, "detect_from_filename"):
++        magic.from_file = magic.detect_from_filename
++        MAGIC_AVAILABLE = True
++    else:
++        logger.error("Your version of python-magic is too old.")
++        MAGIC_AVAILABLE = False
+ 
+ 
+ def is_excluded_elf(filename):
