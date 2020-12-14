@@ -68,6 +68,9 @@ on Linux.
 %build
 python setup.py build
 
+# Sed to fix filemagic
+sed -i setup.py -e "s/python-magic/file-magic/"
+
 %install
 python setup.py install --root=%{buildroot}
 
