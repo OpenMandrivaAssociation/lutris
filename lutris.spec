@@ -16,23 +16,37 @@ BuildRequires:  python3dist(pygobject)
 BuildRequires:  pkgconfig(gdk-3.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
 
-Requires:       glib-networking
-Requires:       gvfs
-Requires:       python-gi
+Requires:	glib-networking
+Requires:	gvfs
+Requires:	python-gi
 
-Requires:       python-dbus
-Requires:       python-evdev
-Requires:       python-gobject3
-Requires:       python-pyxdg
-Requires:       python-yaml
-Requires:       xrandr
-Requires:       python-requests
-Requires:       python-pillow
+Requires:	python-dbus
+Requires:	python-evdev
+Requires:	python-gobject3
+Requires:	python-pyxdg
+Requires:	python-yaml
+Requires:	xrandr
+Requires:	python-requests
+Requires:	python-pillow
 
-Requires:       typelib(GDesktopEnums)
+Requires:	typelib(GDesktopEnums)
 Requires:	typelib(GnomeDesktop)
+Requires:	typelib(WebKit2)
+Requires:	python3dist(distro)
+Requires:	%mklibname gnome-desktop3 19
 
-# Optional deps
+# Really optional, but it doesn't look good if we get a huge warning dialog
+# on startup...
+#Vulkan deps for run games in DXVK and D9VK
+Requires:	vulkan-loader
+Requires:	%mklibname vulkan 1
+# Needed to launch x86 games
+%ifarch %{x86_64}
+Requires:	libvulkan1
+Requires:	vulkan-loader(x86-32)
+%endif
+
+# Optional deps without huge complaints
 
 Recommends:     python-pyinotify
 Recommends:     wine
@@ -43,14 +57,6 @@ Recommends:     gamemode(x86-32)
 # Not ready (yet)
 Recommends:     libstrange
 
-#Vulkan deps for run games in DXVK and D9VK
-Recommends:     vulkan-loader
-Recommends:     %{_lib}vulkan1
-# Needed to launch x86 games
-%ifarch %{x86_64}
-Recommends:     libvulkan1
-Recommends:     vulkan-loader(x86-32)
-%endif
 
 %description
 Lutris is a gaming platform for GNU/Linux. Its goal is to make
