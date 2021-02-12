@@ -1,6 +1,6 @@
 Name:           lutris
 Version:	0.5.8.3
-Release:	2
+Release:	3
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
@@ -33,6 +33,7 @@ Requires:	typelib(GDesktopEnums)
 Requires:	typelib(GnomeDesktop)
 Requires:	typelib(WebKit2)
 Requires:	python3dist(distro)
+Requires:	python3dist(lxml)
 Requires:	%mklibname gnome-desktop3 19
 
 # Really optional, but it doesn't look good if we get a huge warning dialog
