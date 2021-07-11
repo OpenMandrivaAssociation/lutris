@@ -70,7 +70,7 @@ on Linux.
 #https://github.com/lutris/lutris/issues/1428 (penguin)
 
 %prep
-%autosetup -p1 -n %{name}
+%autosetup -p1 -n %{name}-%{version}
 
 %build
 python setup.py build
