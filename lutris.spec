@@ -1,6 +1,6 @@
 Name:           lutris
 Version:	0.5.8.4
-Release:	1
+Release:	2
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
@@ -34,7 +34,7 @@ Requires:	typelib(GnomeDesktop)
 Requires:	typelib(WebKit2)
 Requires:	python3dist(distro)
 Requires:	python3dist(lxml)
-Requires:	%mklibname gnome-desktop3 19
+Requires:	%{_lib}gnome-desktop3_19
 
 # Really optional, but it doesn't look good if we get a huge warning dialog
 # on startup...
@@ -44,7 +44,7 @@ Requires:	%mklibname vulkan 1
 # Needed to launch x86 games
 %ifarch %{x86_64}
 Requires:	libvulkan1
-Requires:	vulkan-loader(x86-32)
+Recommends:	vulkan-loader(x86-32)
 %endif
 
 # Optional deps without huge complaints
