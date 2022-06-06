@@ -1,11 +1,12 @@
 Name:           lutris
-Version:	0.5.9.1
+Version:	0.5.10.1
 Release:	1
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
 URL:            http://lutris.net
-Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
+#Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
+Source0:        https://github.com/lutris/lutris/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python)
@@ -70,7 +71,7 @@ on Linux.
 #https://github.com/lutris/lutris/issues/1428 (penguin)
 
 %prep
-%autosetup -p1 -n %{name}
+%autosetup -p1 -n %{name}-%{version}
 
 %build
 python setup.py build
