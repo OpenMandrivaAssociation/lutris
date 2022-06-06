@@ -6,7 +6,7 @@ Group:          Games/Other
 License:        GPLv3+
 URL:            http://lutris.net
 #Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
-Sourceh:        https://github.com/lutris/lutris/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
+Source0:        https://github.com/lutris/lutris/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python)
