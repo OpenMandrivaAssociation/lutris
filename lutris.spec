@@ -22,7 +22,7 @@ Requires:	gvfs
 Requires:	python-gi
 
 Requires:	python-dbus
-Requires:	python-evdev
+Requires:	python-evdev >= 1.6.0
 Requires:	python-gobject3
 Requires:	python-pyxdg
 Requires:	python-yaml
