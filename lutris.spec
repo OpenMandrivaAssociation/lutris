@@ -1,6 +1,6 @@
 Name:           lutris
 Version:	0.5.10.1
-Release:	1
+Release:	2
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
@@ -46,6 +46,7 @@ Requires:	%mklibname vulkan 1
 %ifarch %{x86_64}
 Requires:	libvulkan1
 Recommends:	vulkan-loader(x86-32)
+Requires: libgnutls30
 %endif
 
 # Optional deps without huge complaints
