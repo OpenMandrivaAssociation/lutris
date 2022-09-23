@@ -35,6 +35,7 @@ Requires:	typelib(GnomeDesktop)
 Requires:	typelib(WebKit2)
 Requires:	python3dist(distro)
 Requires:	python3dist(lxml)
+Requires: python3dist(pypresence)
 Requires:	%{_lib}gnome-desktop3_19
 
 # Really optional, but it doesn't look good if we get a huge warning dialog
