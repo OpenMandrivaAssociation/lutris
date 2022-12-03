@@ -1,5 +1,5 @@
 Name:           lutris
-Version:	0.5.11
+Version:	0.5.12
 Release:	1
 Summary:        Install and play any video game easily
 Group:          Games/Other
