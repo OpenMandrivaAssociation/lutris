@@ -1,10 +1,10 @@
 Name:           lutris
-Version:	0.5.14
+Version:	0.5.15
 Release:	1
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
-URL:            http://lutris.net
+URL:            https://lutris.net
 #Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
 Source0:        https://github.com/lutris/lutris/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
 
