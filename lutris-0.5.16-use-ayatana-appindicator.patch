@@ -1,0 +1,13 @@
+--- a/lutris/gui/widgets/status_icon.py
++++ b/lutris/gui/widgets/status_icon.py
+@@ -8,8 +8,8 @@ from lutris.database.games import get_ga
+ from lutris.game import Game
+ 
+ try:
+-    gi.require_version('AppIndicator3', '0.1')
+-    from gi.repository import AppIndicator3 as AppIndicator
++    gi.require_version('AyatanaAppIndicator3', '0.1')
++    from gi.repository import AyatanaAppIndicator3 as AppIndicator
+     APP_INDICATOR_SUPPORTED = True
+ except (ImportError, ValueError):
+     APP_INDICATOR_SUPPORTED = False

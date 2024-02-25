@@ -1,12 +1,13 @@
 Name:           lutris
 Version:	0.5.16
-Release:	1
+Release:	2
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
 URL:            https://lutris.net
 #Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
 Source0:        https://github.com/lutris/lutris/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
+Patch0:		lutris-0.5.16-use-ayatana-appindicator.patch
 
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python)
@@ -35,7 +36,7 @@ Requires:	typelib(GnomeDesktop)
 Requires:	typelib(WebKit2)
 Requires:	python3dist(distro)
 Requires:	python3dist(lxml)
-Requires: python3dist(pypresence)
+Requires:	python3dist(pypresence)
 Requires:	%{_lib}gnome-desktop3_20
 
 # Really optional, but it doesn't look good if we get a huge warning dialog
