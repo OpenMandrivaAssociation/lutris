@@ -1,6 +1,6 @@
 Name:           lutris
 Version:	0.5.16
-Release:	2
+Release:	3
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
@@ -33,7 +33,7 @@ Requires:	python-pillow
 
 Requires:	typelib(GDesktopEnums)
 Requires:	typelib(GnomeDesktop)
-Requires:	typelib(WebKit2)
+Requires:	typelib(WebKit2) = 4.1
 Requires:	python3dist(distro)
 Requires:	python3dist(lxml)
 Requires:	python3dist(pypresence)
