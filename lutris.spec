@@ -7,7 +7,7 @@ License:        GPLv3+
 URL:            https://lutris.net
 #Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
 Source0:        https://github.com/lutris/lutris/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
-Patch0:		lutris-0.5.16-use-ayatana-appindicator.patch
+#Patch0:		lutris-0.5.16-use-ayatana-appindicator.patch
 #Patch1:         0001-webconnect_dialog-Only-use-WebKit2-4.1.patch
 
 BuildArch:      noarch
