@@ -1,13 +1,14 @@
---- a/lutris/gui/widgets/status_icon.py
-+++ b/lutris/gui/widgets/status_icon.py
-@@ -8,8 +8,8 @@ from lutris.database.games import get_ga
- from lutris.game import Game
+diff -uraN lutris-0.5.17/lutris/gui/widgets/status_icon.py omv-lutris-0.5.17/lutris/gui/widgets/status_icon.py
+--- lutris-0.5.17/lutris/gui/widgets/status_icon.py	2024-04-11 01:27:01.000000000 +0200
++++ omv-lutris-0.5.17/lutris/gui/widgets/status_icon.py	2024-04-15 20:21:21.133908511 +0200
+@@ -10,8 +10,8 @@
+ from lutris.util import cache_single
  
  try:
--    gi.require_version('AppIndicator3', '0.1')
+-    gi.require_version("AppIndicator3", "0.1")
 -    from gi.repository import AppIndicator3 as AppIndicator
 +    gi.require_version('AyatanaAppIndicator3', '0.1')
 +    from gi.repository import AyatanaAppIndicator3 as AppIndicator
+ 
      APP_INDICATOR_SUPPORTED = True
  except (ImportError, ValueError):
-     APP_INDICATOR_SUPPORTED = False
