@@ -1,6 +1,6 @@
 Name:           lutris
 Version:	0.5.17
-Release:	1
+Release:	2
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
@@ -31,7 +31,7 @@ Requires:	python-yaml
 Requires:	xrandr
 Requires:	python-requests
 Requires:	python-pillow
-
+Requires: fluidsynth
 Requires:	typelib(GDesktopEnums)
 Requires:	typelib(GnomeDesktop)
 Requires:	typelib(WebKit2) = 4.1
@@ -55,7 +55,7 @@ Requires: libgnutls30
 # Optional deps without huge complaints
 
 Recommends:     python-pyinotify
-Recommends:     wine
+Recommends:     (wine or proton or proton-experimental)
 Recommends:     gamemode
 %ifarch %{x86_64}
 Recommends:     gamemode(x86-32)
