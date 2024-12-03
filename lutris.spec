@@ -62,6 +62,8 @@ Recommends:     gamemode(x86-32)
 %endif
 # Not ready (yet)
 Recommends:     libstrange
+# Optional
+Recommends:     umu-launcher
 
 
 %description
