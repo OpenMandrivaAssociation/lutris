@@ -1,6 +1,6 @@
 Name:           lutris
 Version:	0.5.19
-Release:	1
+Release:	2
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
@@ -88,7 +88,9 @@ sed -i setup.py -e "s/python-magic/file-magic/"
 %install
 python setup.py install --root=%{buildroot}
 
-%files
+%find_lang %{name}
+
+%files -f %{name}.lang
 %{_bindir}/%{name}
 %{_datadir}/%{name}/
 %{_datadir}/metainfo/net.lutris.Lutris.metainfo.xml
