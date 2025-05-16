@@ -1,6 +1,6 @@
 Name:           lutris
 Version:	0.5.19
-Release:	2
+Release:	3
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
@@ -24,7 +24,7 @@ BuildRequires:  pkgconfig(gtk+-3.0)
 Requires:	glib-networking
 Requires:	gvfs
 Requires:	python-gi
-
+Requires: at-spi2-core
 Requires:	python-dbus
 Requires:	python-evdev >= 1.6.0
 Requires:	python-gobject3
@@ -80,6 +80,11 @@ on Linux.
 
 %prep
 %autosetup -p1 -n %{name}-%{version}
+
+# From Arch:
+# Regenerate protos to fix BattleNet plugin
+protoc --proto_path=galaxy_blizzard_plugin/src --python_out=. product_db.proto
+cp -vf product_db_pb2.py lutris/util/battlenet/product_db_pb2.py
 
 %build
 %meson
