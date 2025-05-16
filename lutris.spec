@@ -22,27 +22,28 @@ BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(pygobject)
 BuildRequires:  pkgconfig(gdk-3.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
+BuildRequireS:  protobuf-compiler
 
-Requires:	glib-networking
-Requires:	gvfs
-Requires:	python-gi
+Requires: glib-networking
+Requires: gvfs
+Requires: python-gi
 Requires: at-spi2-core
-Requires:	python-dbus
-Requires:	python-evdev >= 1.6.0
-Requires:	python-gobject3
-Requires:	python-pyxdg
-Requires:	python-yaml
-Requires:	xrandr
-Requires:	python-requests
-Requires:	python-pillow
+Requires: python-dbus
+Requires: python-evdev >= 1.6.0
+Requires: python-gobject3
+Requires: python-pyxdg
+Requires: python-yaml
+Requires: xrandr
+Requires: python-requests
+Requires: python-pillow
 Requires: fluidsynth
-Requires:	typelib(GDesktopEnums)
-Requires:	typelib(GnomeDesktop)
-Requires:	typelib(WebKit2) = 4.1
-Requires:	python3dist(distro)
-Requires:	python3dist(lxml)
-Requires:	python3dist(pypresence)
-Requires:	%{_lib}gnome-desktop3_20
+Requires: typelib(GDesktopEnums)
+Requires: typelib(GnomeDesktop)
+Requires: typelib(WebKit2) = 4.1
+Requires: python3dist(distro)
+Requires: python3dist(lxml)
+Requires: python3dist(pypresence)
+Requires: %{_lib}gnome-desktop3_20
 
 # Really optional, but it doesn't look good if we get a huge warning dialog
 # on startup...
