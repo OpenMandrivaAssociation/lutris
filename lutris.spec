@@ -7,6 +7,7 @@ License:        GPLv3+
 URL:            https://lutris.net
 #Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
 Source0:        https://github.com/lutris/lutris/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
+Source1:        https://github.com/bartok765/galaxy_blizzard_plugin/archive/refs/heads/master.zip
 #Patch0:		lutris-0.5.16-use-ayatana-appindicator.patch
 Patch1:         0001-webconnect_dialog-Only-use-WebKit2-4.1.patch
 
@@ -79,7 +80,8 @@ on Linux.
 #https://github.com/lutris/lutris/issues/1428 (penguin)
 
 %prep
-%autosetup -p1 -n %{name}-%{version}
+%autosetup -p1 -n %{name}-%{version} -a1
+mv galaxy_blizzard_plugin-master galaxy_blizzard_plugin
 
 # From Arch:
 # Regenerate protos to fix BattleNet plugin
