@@ -7,7 +7,8 @@ License:        GPLv3+
 URL:            https://lutris.net
 #Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
 Source0:        https://github.com/lutris/lutris/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
-Source1:        https://github.com/bartok765/galaxy_blizzard_plugin/archive/refs/heads/galaxy_blizzard_plugin-master.zip
+Source1:        galaxy_blizzard_plugin-master.zip
+# taken from https://github.com/bartok765/galaxy_blizzard_plugin
 #Patch0:		lutris-0.5.16-use-ayatana-appindicator.patch
 Patch1:         0001-webconnect_dialog-Only-use-WebKit2-4.1.patch
 
