@@ -11,6 +11,7 @@ Source0:        https://github.com/lutris/lutris/archive/refs/tags/v%{version}/%
 Patch1:         0001-webconnect_dialog-Only-use-WebKit2-4.1.patch
 
 BuildArch:      noarch
+BuildRequires:  gettext
 BuildRequires:  meson
 BuildRequires:  pkgconfig(python)
 BuildRequires:  pkgconfig(pygobject-3.0)
