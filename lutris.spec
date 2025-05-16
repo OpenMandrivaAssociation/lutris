@@ -22,7 +22,7 @@ BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(pygobject)
 BuildRequires:  pkgconfig(gdk-3.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
-BuildRequireS:  protobuf-compiler
+BuildRequires:  protobuf-compiler
 
 Requires: glib-networking
 Requires: gvfs
