@@ -100,5 +100,5 @@ sed -i setup.py -e "s/python-magic/file-magic/"
 %{_mandir}/man1/lutris.1.*
 %{_iconsdir}/hicolor/*x*/apps/net.lutris.Lutris.png
 %{_iconsdir}/hicolor/scalable/apps/net.lutris.Lutris.svg
-%{python_sitelib}/%{name}-%{version}-py%{python_version}.egg-info
+#{python_sitelib}/%{name}-%{version}-py%{python_version}.egg-info
 %{python_sitelib}/%{name}/
