@@ -11,6 +11,7 @@ Source0:        https://github.com/lutris/lutris/archive/refs/tags/v%{version}/%
 Patch1:         0001-webconnect_dialog-Only-use-WebKit2-4.1.patch
 
 BuildArch:      noarch
+BuildRequires:  meson
 BuildRequires:  pkgconfig(python)
 BuildRequires:  pkgconfig(pygobject-3.0)
 BuildRequires:  python3dist(pyxdg)
@@ -80,13 +81,13 @@ on Linux.
 %autosetup -p1 -n %{name}-%{version}
 
 %build
-python setup.py build
-
+%meson
+%meson_build
 # Sed to fix filemagic
 sed -i setup.py -e "s/python-magic/file-magic/"
 
 %install
-python setup.py install --root=%{buildroot}
+%meson_install
 
 %find_lang %{name}
 
