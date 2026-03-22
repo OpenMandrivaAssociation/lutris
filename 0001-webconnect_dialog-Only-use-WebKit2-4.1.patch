@@ -1,7 +1,7 @@
-diff -up lutris-0.5.17/lutris/gui/dialogs/webconnect_dialog.py.2~ lutris-0.5.17/lutris/gui/dialogs/webconnect_dialog.py
---- lutris-0.5.17/lutris/gui/dialogs/webconnect_dialog.py.2~	2024-04-16 21:31:33.653385782 +0200
-+++ lutris-0.5.17/lutris/gui/dialogs/webconnect_dialog.py	2024-04-16 21:32:28.785874915 +0200
-@@ -8,7 +8,9 @@ import gi
+diff -uraN lutris-0.5.22/lutris/gui/dialogs/webconnect_dialog.py omv-lutris-0.5.22/lutris/gui/dialogs/webconnect_dialog.py
+--- lutris-0.5.22/lutris/gui/dialogs/webconnect_dialog.py	2026-02-25 02:09:14.000000000 +0100
++++ omv-lutris-0.5.22/lutris/gui/dialogs/webconnect_dialog.py	2026-03-22 17:44:50.895046815 +0100
+@@ -12,7 +12,9 @@
  try:
      gi.require_version("WebKit2", "4.1")
  except ValueError:
@@ -9,6 +9,6 @@ diff -up lutris-0.5.17/lutris/gui/dialogs/webconnect_dialog.py.2~ lutris-0.5.17/
 +    print("You need WebKit2 4.1")
 +    exit(1)
 +    # gi.require_version("WebKit2", "4.0")
- from gi.repository import WebKit2
+ from gi.repository import WebKit2  # type: ignore[attr-defined]
  
- from lutris.gui.dialogs import ModalDialog
+ from lutris.config import LutrisConfig
