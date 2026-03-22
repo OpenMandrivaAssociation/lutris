@@ -1,6 +1,6 @@
 Name:           lutris
-Version:	0.5.19
-Release:	4
+Version:	0.5.22
+Release:	1
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
