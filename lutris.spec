@@ -106,8 +106,12 @@ sed -i setup.py -e "s/python-magic/file-magic/"
 %{_datadir}/%{name}/
 %{_datadir}/metainfo/net.lutris.Lutris.metainfo.xml
 %{_datadir}/applications/net.lutris.Lutris.desktop
+%{_datadir}/applications/net.lutris.Lutris1.desktop
+%{_datadir}/mime/packages/application-x-lutris.xml
 %{_mandir}/man1/lutris.1.*
 %{_iconsdir}/hicolor/*x*/apps/net.lutris.Lutris.png
 %{_iconsdir}/hicolor/scalable/apps/net.lutris.Lutris.svg
+%{_iconsdir}/hicolor/*x*/mimetypes/application-x-lutris.png
+%{_iconsdir}/hicolor/scalable/mimetypes/application-x-lutris.svg
 #{python_sitelib}/%{name}-%{version}-py%{python_version}.egg-info
 %{python_sitelib}/%{name}/
