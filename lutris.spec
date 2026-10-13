@@ -1,6 +1,6 @@
 Name:           lutris
 Version:	0.5.22
-Release:	1
+Release:	2
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
@@ -15,11 +15,11 @@ Patch1:         0001-webconnect_dialog-Only-use-WebKit2-4.1.patch
 BuildArch:      noarch
 BuildRequires:  gettext
 BuildRequires:  meson
-BuildRequires:  pkgconfig(python)
+BuildRequires:  pkgconfig(python3)
 BuildRequires:  pkgconfig(pygobject-3.0)
-BuildRequires:  python3dist(pyxdg)
-BuildRequires:  python3dist(setuptools)
-BuildRequires:  python3dist(pygobject)
+BuildRequires:  python%{pyver}dist(pyxdg)
+BuildRequires:  python%{pyver}dist(setuptools)
+BuildRequires:  python%{pyver}dist(pygobject)
 BuildRequires:  pkgconfig(gdk-3.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  protobuf-compiler
@@ -40,9 +40,9 @@ Requires: fluidsynth
 Requires: typelib(GDesktopEnums)
 Requires: typelib(GnomeDesktop)
 Requires: typelib(WebKit2) = 4.1
-Requires: python3dist(distro)
-Requires: python3dist(lxml)
-Requires: python3dist(pypresence)
+Requires: python%{pyver}dist(distro)
+Requires: python%{pyver}dist(lxml)
+Requires: python%{pyver}dist(pypresence)
 Requires: %{_lib}gnome-desktop3_20
 
 # Really optional, but it doesn't look good if we get a huge warning dialog
