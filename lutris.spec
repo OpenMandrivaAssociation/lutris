@@ -1,6 +1,6 @@
 Name:           lutris
 Version:	0.5.22
-Release:	2
+Release:	3
 Summary:        Install and play any video game easily
 Group:          Games/Other
 License:        GPLv3+
@@ -11,6 +11,7 @@ Source1:        galaxy_blizzard_plugin-master.zip
 # taken from https://github.com/bartok765/galaxy_blizzard_plugin
 #Patch0:		lutris-0.5.16-use-ayatana-appindicator.patch
 Patch1:         0001-webconnect_dialog-Only-use-WebKit2-4.1.patch
+Patch2:         https://patch-diff.githubusercontent.com/raw/lutris/lutris/pull/6833.patch
 
 BuildArch:      noarch
 BuildRequires:  gettext
